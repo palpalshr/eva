@@ -1,0 +1,129 @@
+
+<html >
+<head>
+   
+    <title>Organize</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🏔️ EVA</div>
+        <div class="nav-links">
+            <a href="index.html">home</a>
+            <a href="events.html">events</a>
+            <a href="tickets.html">tickets</a>
+            <a href="organize.html">organize</a>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="card" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+            <h2 class="section-title" style="border-left-color: #f97316; margin-bottom: 1.5rem;">📝 organize your event</h2>
+            <p style="margin-bottom: 2rem; color: #cbd5e1;">fill out the form below & we’ll list your event within 24 hours.</p>
+
+            <form action="#" method="POST" class="event-form">
+                <!-- event name -->
+                <div class="form-group">
+                    <label>event name *</label>
+                    <input type="text" name="event_name" placeholder="e.g., Bhaktapur Night Market" required>
+                </div>
+
+                <!-- category dropdown -->
+                <div class="form-group">
+                    <label>category *</label>
+                    <select name="category" required>
+                        <option value="">select type</option>
+                        <option>🎸 live gig / concert</option>
+                        <option>🛍️ market / pop-up</option>
+                        <option>✋ workshop / class</option>
+                        <option>🎭 cultural / festival</option>
+                        <option>📖 talk / poetry / zine</option>
+                    </select>
+                </div>
+
+                <!-- location + city (inline) -->
+                <div class="inline-row">
+                    <div class="form-group" style="flex:2;">
+                        <label>venue / location *</label>
+                        <input type="text" name="venue" placeholder="e.g., Ferne Haus, Patan Dhoka" required>
+                    </div>
+                    <div class="form-group" style="flex:1;">
+                        <label>city *</label>
+                        <select name="city" required>
+                            <option>Kathmandu</option>
+                            <option>Lalitpur</option>
+                            <option>Bhaktapur</option>
+                            <option>Pokhara</option>
+                            <option>Biratnagar</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- date + time inline -->
+                <div class="inline-row">
+                    <div class="form-group" style="flex:1;">
+                        <label>date *</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group" style="flex:1;">
+                        <label>start time *</label>
+                        <input type="time" name="start_time" required>
+                    </div>
+                    <div class="form-group" style="flex:1;">
+                        <label>end time</label>
+                        <input type="time" name="end_time">
+                    </div>
+                </div>
+
+                <!-- price in NRS -->
+                <div class="form-group">
+                    <label>ticket price (NRS) *</label>
+                    <input type="number" name="price_nrs" placeholder="e.g., 500, 1200, or 0 for free" required>
+                </div>
+
+                <!-- short description -->
+                <div class="form-group">
+                    <label>short description *</label>
+                    <textarea name="description" rows="3" placeholder="what makes this event special? vibe, performers, market stalls..." required></textarea>
+                </div>
+
+                <!-- contact info -->
+                <div class="inline-row">
+                    <div class="form-group" style="flex:1;">
+                        <label>organizer name *</label>
+                        <input type="text" name="organizer" required>
+                    </div>
+                    <div class="form-group" style="flex:1;">
+                        <label>phone / WhatsApp</label>
+                        <input type="tel" name="phone" placeholder="optional">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>email *</label>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <!-- checkbox: add to newsletter + venue type -->
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" checked> 📧 yes, keep me updated about local events
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="indoor_outdoor"> 🏕️ this is an outdoor / open-air event
+                    </label>
+                </div>
+
+                <!-- submit button (uses your existing btn class) -->
+                <div style="margin-top: 1rem;">
+                    <button type="submit" class="btn">✨ submit event →</button>
+                    <p style="font-size: 0.75rem; margin-top: 1rem; color: #94a3b8;">we’ll review and publish within 24h. free for local organizers.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>EVA : event via ascent </footer>
+</body>
+</html>
